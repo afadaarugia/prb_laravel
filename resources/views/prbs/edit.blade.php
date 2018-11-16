@@ -21,8 +21,8 @@
                 </div> <br />
             @endif
             <form method="post" action="{{ route('prbs.update', $prb->id) }}">
-            @method('PATCH')
-            @csrf
+                @method('PATCH')
+                @csrf
                 <div class="form-group">
                     <label for="nama">Nama:</label>
                     <input type="text" class="form-control" name="nama" value="{{ $prb->nama }}">

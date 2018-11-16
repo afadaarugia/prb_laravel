@@ -76,7 +76,7 @@ class prbController extends Controller
     public function edit($id)
     {
         $prb = prb::find($id);
-        return view('prbs.edit', compact('prbs'));
+        return view('prbs.edit', compact('prb'));
     }
 
     /**
@@ -113,7 +113,7 @@ class prbController extends Controller
      */
     public function destroy($id)
     {
-        $prb = $prb::find($id);
+        $prb = prb::find($id);
         $prb->delete();
 
         return redirect('/prbs')->with('Sukses!', 'Data telah dihapus');
